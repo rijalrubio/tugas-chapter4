@@ -11,6 +11,7 @@ resetButton.addEventListener ('click', startGame);
 
 function startGame() {
     boxElements.forEach((box) => {
+        turn = cross;
         box.classList.remove(circle);
         box.classList.remove(cross);
         box.addEventListener("click", handleClick, { once: true });
