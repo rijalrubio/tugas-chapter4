@@ -1,0 +1,62 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+#reset{
+    margin:0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
+}
+
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3) {
+    border-top: none;
+}
+
+.box:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.box:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.box:nth-child(7),
+.box:nth-child(8),
+.box:last-child {
+    border-bottom: none;
+}
+
+.cross {
+    background-color: white;
+}
+
+.cross::after {
+    content: 'X';
+}
+
+.circle {
+    background-color: white;
+}
+
+.circle::after{
+    content: 'O';
+}
